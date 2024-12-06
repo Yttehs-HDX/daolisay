@@ -4,6 +4,8 @@ Cowsay implements for shuodedaoli
 
 ## Usage
 
+0. Install `python3` `jieba (pip)`
+
 1. Add binary to **PATH**
 
 ```bash
