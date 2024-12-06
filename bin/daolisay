@@ -27,6 +27,15 @@ def draw_dialog(words: str) -> None:
     print(f'+{'-' * (MAX_LEN_EACH_LINE - 2)}+')
     print('\\/'.center(MAX_LEN_EACH_LINE))
 
+def draw_daoli(name: str) -> None:
+    file = f'{name}.daoli'
+    path = os.path.join(DAOLI_PATH, file)
+    if os.path.exists(path):
+        with open(path, 'r') as f:
+            for line in f:
+                print(line, end='')
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Daoli say.')
     parser.add_argument('-f', '--file', type=str, help='Which daoli?')
@@ -36,17 +45,13 @@ def parse_args() -> argparse.Namespace:
 def main():
     jb.setLogLevel(logging.NOTSET)
     args = parse_args()
-    if args.file:
-        file = f'{args.file}.daoli'
-        path = os.path.join(DAOLI_PATH, file)
-        if os.path.exists(path):
-            if args.description:
-                description = args.description
-                draw_dialog(description)
-        # cat the daoli
-        with open(path, 'r') as f:
-            for line in f:
-                print(line, end='')
+    if args.file and args.description:
+        description = args.description
+        name = args.file
+        draw_dialog(description)
+        draw_daoli(name)
+    else:
+        print('Please input the daoli name and description.')
 
 if __name__ == '__main__':
     main()
