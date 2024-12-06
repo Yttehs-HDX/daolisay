@@ -35,7 +35,6 @@ def draw_daoli(name: str) -> None:
             for line in f:
                 print(line, end='')
 
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Daoli say.')
     parser.add_argument('-f', '--file', type=str, help='Which daoli?')
