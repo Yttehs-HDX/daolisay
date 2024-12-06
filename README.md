@@ -46,6 +46,10 @@ Result:
  /_______________\__________/__________/
 ```
 
+## Contribution
+
+If you want to add new ascii image, fix current image, or provide better code implementing, just open PR.
+
 ## License
 
 MIT
