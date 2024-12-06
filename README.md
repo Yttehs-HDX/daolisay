@@ -18,6 +18,8 @@ source /path/to/repo/bin/env
 daolisay -f shuodedaoli -d "韭菜盒子"
 ```
 
+> -f options: shuodedaoli, lizitou
+
 Result:
 
 ```txt
