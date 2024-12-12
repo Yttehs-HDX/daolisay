@@ -44,7 +44,10 @@ def parse_args() -> argparse.Namespace:
 def main():
     jb.setLogLevel(logging.NOTSET)
     args = parse_args()
-    if args.file and args.description:
+    if not args.file:
+        args.file = 'shuodedaoli'
+
+    if args.description:
         description = args.description
         name = args.file
         draw_dialog(description)
