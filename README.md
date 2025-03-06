@@ -9,7 +9,7 @@ Cowsay implements for shuodedaoli
 1. Add binary to **PATH**
 
 ```bash
-source /path/to/repo/bin/env
+export PATH="$PATH":/path/to/repo/bin
 ```
 
 2. Run the command
